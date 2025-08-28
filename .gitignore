@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Models (don't commit heavy models)
+models/
+backend/train/artifacts/
+*.h5
+*.joblib
+*.pkl
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# environment
+.env
