@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>FakeCastX Demo</title></head>
+<body>
+  <h2>FakeCastX — Demo</h2>
+  <textarea id="text" rows="6" cols="80" placeholder="Paste news text here..."></textarea><br>
+  <button id="btn">Check Text</button>
+  <div id="out"></div>
+
+  <script>
+  document.getElementById('btn').onclick = async () => {
+    const t = document.getElementById('text').value;
+    const res = await fetch('http://127.0.0.1:8000/predict_text', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({text: t})
+    });
+    const j = await res.json();
+    document.getElementById('out').innerText = JSON.stringify(j, null, 2);
+  };
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+sentence-transformers
+scikit-learn
+joblib
+pandas
+numpy
+torch
+#tensorflow==2.12.0
+transformers
+pillow
+langdetect
+cachetools
+lime
+opencv-python-headless
+requests
